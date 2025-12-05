@@ -42,7 +42,7 @@ pipeline{
   stage('Copiar ficheros') {
       steps {
          dir('biblioteca') {
-                    bat 'xcopy /Y ".\\target\\*.jar" ".\\v%VERSION_BACK%"'
+                    bat 'xcopy /Y ".\\target\\*.jar" "..\\v%VERSION_BACK%"'
                     }
       }
   }
