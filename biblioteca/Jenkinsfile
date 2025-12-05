@@ -33,17 +33,18 @@ pipeline{
         }
     }
 
-    stage('Crear directorio'){
-      steps{
-        bat 'mkdir v%VERSION_BACK%'
+  stage('Crear directorio') {
+      steps {
+          bat 'mkdir v%VERSION_BACK%'
       }
-    }
+  }
 
-    stage('Copiar ficheros'){
-        steps{
+  stage('Copiar ficheros') {
+      steps {
           bat 'xcopy /Y ".\\target\\*.jar" ".\\v%VERSION_BACK%"'
-        }
-    }
+      }
+  }
+
   }
 }
 
