@@ -35,5 +35,4 @@ public class LibroController {
     void borrarLibro(@PathVariable("libroId") Long libroId) {
         this.libroServiceImpl.eliminarLibro(libroId);
     }
-
 }
