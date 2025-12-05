@@ -25,10 +25,12 @@ pipeline{
       }
     }
 
-    stage('Maven clean'){
-      steps {
-        bat 'mvn clean package'
-      }
+    stage('Maven clean') {
+        steps {
+            dir('biblioteca') {
+                bat 'mvn clean package'
+            }
+        }
     }
 
     stage('Crear directorio'){
